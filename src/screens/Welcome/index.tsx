@@ -1,6 +1,6 @@
 import React, { FC } from 'react'
-import { Text, View, TouchableOpacity, Image } from 'react-native'
-import { translate } from '@utils'
+import { Text, View, Image } from 'react-native'
+/* import { translate } from '@utils' */
 import { useTheme } from '@providers'
 import { styles } from './styles'
 import Logo from '@assets/img/logo.png'
