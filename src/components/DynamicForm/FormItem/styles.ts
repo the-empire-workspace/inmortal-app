@@ -9,7 +9,7 @@ export const styles = StyleSheet.create({
   input: {
     zIndex: 2,
     fontSize: 16,
-    color: 'white',
+    color: 'black',
     width: '100%',
   },
   error: {
