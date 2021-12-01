@@ -15,10 +15,4 @@ export const styles = StyleSheet.create({
   error: {
     color: 'red',
   },
-  multipleContent: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'center',
-    width: '100%',
-  }
 })

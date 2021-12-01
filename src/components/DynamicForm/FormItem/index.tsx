@@ -10,21 +10,18 @@ const Input: FC<InputProps> = ({
   mainRender,
   values,
   onChange,
-  multiple
 }: any) => {
   const [value, setValue] = useState('')
 
   const onChangeInput = (val: any) => {
-    setValue(val.nativeEvent.text)
-    onChange(val.nativeEvent.text)
+    setValue(val?.nativeEvent?.text || val)
+    onChange(val?.nativeEvent?.text || val)
   }
 
   const onChangeSelect = (val: any) => {
     setValue(val)
     onChange(val)
   }
-
-  values.style = multiple ? { ...values.style, width: `100%`} : values.style
 
   return element === 'select'
     ? React.createElement(
@@ -76,35 +73,32 @@ const FormItem: FC<ItemProps> = ({
   return (
     <>
       {element === 'multiple' ? (
-        <View style={styles.multipleContent}>
-          {element_array.map((item: any, index: any) => {
-            const { element: elements, label, render } = item
-            const onChangeMultiple = (val: any) =>
-              returnData(
-                returnForm(
-                  val,
-                  form,
-                  item.name,
-                  data,
-                  setData,
-                  setValidate,
-                ),
-              )
-
-            return (
-              <View key={index} style={[styles.root, { borderBottomColor: colors.primary, width: `${100 / element_array.length}%` }]}>
-                {label ? <Text>{label}</Text> : null}
-                <Input
-                  element={elements}
-                  mainRender={render}
-                  values={item}
-                  onChange={onChangeMultiple}
-                  multiple={true}
-                />
-              </View>
+        element_array.map((item: any, index: any) => {
+          const { elements, label, render } = item
+          const onChangeMultiple = (val: any) =>
+            returnData(
+              returnForm(
+                val.target.value,
+                form,
+                item.name,
+                data,
+                setData,
+                setValidate,
+              ),
             )
-          })}
-        </View>
+
+          return (
+            <View key={index}>
+              {label ? <Text>{label}</Text> : null}
+              <Input
+                element={elements}
+                mainRender={render}
+                values={item}
+                onChange={onChangeMultiple}
+              />
+            </View>
+          )
+        })
       ) : (
         <View>
           {Label}

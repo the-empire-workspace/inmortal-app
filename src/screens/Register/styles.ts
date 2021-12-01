@@ -32,7 +32,6 @@ export const styles = StyleSheet.create({
     borderWidth:1,
     marginTop:10,
     paddingLeft:3,
-    height:40
   },
   formButton:{
     height:40,

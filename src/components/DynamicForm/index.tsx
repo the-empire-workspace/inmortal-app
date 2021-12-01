@@ -25,12 +25,9 @@ const DynamicForm: FC<Props> = ({ formData, returnData }) => {
           data[array_element.name][0] === '')
       )
         data[array_element.name] = [array_element.defaultValue, false]
-
-      array_element.render = Structure[array_element.element]?.render
-      return array_element
     })
 
-    value.render = Structure[element]?.render
+    if (element) value.render = Structure[element].render
 
     return { ...Structure[element], ...value }
   })

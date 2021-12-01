@@ -5639,6 +5639,11 @@ react-native-codegen@^0.0.7:
     jscodeshift "^0.11.0"
     nullthrows "^1.1.1"
 
+react-native-date-picker@^4.1.2:
+  version "4.1.2"
+  resolved "https://registry.yarnpkg.com/react-native-date-picker/-/react-native-date-picker-4.1.2.tgz#10360c3eca4b05617f6592d9246638fa4c2a82ae"
+  integrity sha512-9l4JPGEr9+l6Tmq2JyPm4jdkJCfdz6rz5fBpvtiFA7Wps33W4cMkwboYVZE/2GOaCxSpzWyZD+9jj2987qnjpQ==
+
 react-native-image-picker@^4.1.2:
   version "4.1.2"
   resolved "https://registry.yarnpkg.com/react-native-image-picker/-/react-native-image-picker-4.1.2.tgz#1b4b4980a6878930675396c23dffbaa802cbbcc6"

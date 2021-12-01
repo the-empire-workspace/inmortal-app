@@ -35,13 +35,19 @@ export const registerForm = (color: any, translate: any) => [
       maxLength: 72,
     },
   },
-  /* {
+  {
     element: 'date',
     name: 'date_birth',
-    type: 'date',
+    label: null,
     style: { ...styles.formItem, color: color },
-    placeholder: "Fecha de nacimiento",
-  }, */
+    defaultValue: '',
+    placeholder: 'Fecha de Nacimiento',
+    validations: {
+      required: true,
+      minLength: 4,
+      maxLength: 72,
+    },
+  },
   {
     element: 'input',
     name: 'email',
@@ -75,8 +81,7 @@ export const registerForm = (color: any, translate: any) => [
       minLength: 8,
       maxLength: 72,
     },
-  },
-  {
+  }, {
     element: 'input',
     name: 'email_contact',
     label: null,
@@ -97,29 +102,30 @@ export const registerForm = (color: any, translate: any) => [
     element: 'select',
     name: 'religion',
     type: 'select',
+    defaultValue: '',
     style: { ...styles.formItem, color: color },
     placeholderTextColor: '#fff',
     placeholder: 'Religión (Opcional)',
-    values:[
+    values: [
       {
-        label:'Judaísmo',
-        value:'JUD',
+        label: 'Judaísmo',
+        value: 'JUD',
       },
       {
-        label:'Cristianismo',
-        value:'CRI',
+        label: 'Cristianismo',
+        value: 'CRI',
       },
       {
-        label:'Islamismo',
-        value:'ISL',
+        label: 'Islamismo',
+        value: 'ISL',
       },
       {
-        label:'Budaismo',
-        value:'BUD',
+        label: 'Budaismo',
+        value: 'BUD',
       },
       {
-        label:'Hinduismo',
-        value:'HIN'
+        label: 'Hinduismo',
+        value: 'HIN'
       }
     ],
     validations: {

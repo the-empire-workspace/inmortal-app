@@ -10,5 +10,4 @@ export interface InputProps {
   mainRender: any
   values: any
   onChange: any
-  multiple?: boolean
 }
