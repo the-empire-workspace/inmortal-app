@@ -36,19 +36,6 @@ export const registerForm = (color: any, translate: any) => [
     },
   },
   {
-    element: 'date',
-    name: 'date_birth',
-    label: null,
-    style: { ...styles.formItem, color: color },
-    defaultValue: '',
-    placeholder: 'Fecha de Nacimiento',
-    validations: {
-      required: true,
-      minLength: 4,
-      maxLength: 72,
-    },
-  },
-  {
     element: 'input',
     name: 'email',
     label: null,
@@ -98,6 +85,16 @@ export const registerForm = (color: any, translate: any) => [
       maxLength: 72,
     },
   },
+  /* {
+    element: 'date',
+    disabled:false,
+    label:null,
+    mode:"date",
+    name:'date_b',
+    placeholder:"select date",
+    maxmunDate:Date(),
+    minimunDate:Date
+  }, */
   {
     element: 'select',
     name: 'religion',
