@@ -1,6 +1,6 @@
 import { styles } from './styles'
 
-export const registerForm = (color: any, translate: any) => [
+export const registerForm = (color: any /* translate: any */) => [
   {
     element: 'input',
     name: 'name',
@@ -68,7 +68,8 @@ export const registerForm = (color: any, translate: any) => [
       minLength: 8,
       maxLength: 72,
     },
-  }, {
+  },
+  {
     element: 'input',
     name: 'email_contact',
     label: null,
@@ -122,8 +123,8 @@ export const registerForm = (color: any, translate: any) => [
       },
       {
         label: 'Hinduismo',
-        value: 'HIN'
-      }
+        value: 'HIN',
+      },
     ],
     validations: {
       required: false,

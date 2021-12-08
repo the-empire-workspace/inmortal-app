@@ -1,6 +1,6 @@
 import React from 'react'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
-import { Register, Welcome,Login } from '@screens'
+import { Register, Login } from '@screens'
 
 const Stack = createNativeStackNavigator()
 
@@ -15,7 +15,6 @@ export const PublicStack = () => (
   >
     <Stack.Screen name="Login" component={Login} />
     <Stack.Screen name="Register" component={Register} />
-    {/* <Stack.Screen name="Welcome" component={Welcome} /> */}
   </Stack.Navigator>
 )
 

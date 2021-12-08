@@ -1,4 +1,4 @@
-import React,{FC,useState} from 'react'
+import React, { FC, useState } from 'react'
 import { View, Text, Image, ScrollView } from 'react-native'
 import { DynamicForm, Button } from 'components'
 import { useTheme } from '@providers'
@@ -10,17 +10,17 @@ import { useNavigation } from '@react-navigation/core'
 import { useDispatch } from 'react-redux'
 import { signup } from 'store/account/action'
 
-const Register:FC = () => {
-  const {colors}=useTheme()
-  const [form,setForm]=useState([{},false])
-  const navigator:any=useNavigation()
-  const dispatch=useDispatch()
-  const register = () => dispatch(signup({ ...form[0]}))
+const Register: FC = () => {
+  const { colors } = useTheme()
+  const [form, setForm] = useState([{}, false])
+  const navigator: any = useNavigation()
+  const dispatch = useDispatch()
+  const register = () => dispatch(signup({ ...form[0] }))
   return (
     <View style={[styles.root, { backgroundColor: colors.background }]}>
       <ScrollView>
         <View style={styles.logoContent}>
-          <Image style={styles.logo}  source={Logo} />
+          <Image style={styles.logo} source={Logo} />
         </View>
         <View style={styles.formContent}>
           <Text style={styles.formTitle}>Crear cuenta</Text>
@@ -39,9 +39,9 @@ const Register:FC = () => {
             />
             <Button
               text={translate('back')}
-              onPress={()=>navigator.navigate('Login')}
+              onPress={() => navigator.navigate('Login')}
               disabled={false}
-              style={[{color:'#fff'}]}
+              style={[{ color: '#fff' }]}
             />
           </View>
         </View>

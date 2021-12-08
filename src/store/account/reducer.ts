@@ -1,5 +1,5 @@
 import { DispatchProps } from 'interfaces'
-import { SIGNIN,SIGNUP,LOGOUT } from './action-types'
+import { SIGNIN, SIGNUP, LOGOUT } from './action-types'
 
 const initialState = {
   isAuth: false,
@@ -8,9 +8,9 @@ const initialState = {
     last_name: null,
     email: null,
     password: null,
-    email_contact:null,
-    religion:null,
-    biography:null
+    email_contact: null,
+    religion: null,
+    biography: null,
   },
 }
 

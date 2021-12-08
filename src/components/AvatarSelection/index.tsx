@@ -38,7 +38,10 @@ const AvatarSelection: FC<Props> = ({ onChange }) => {
   }
 
   return (
-    <TouchableOpacity style={[styles.logoContainer, { backgroundColor: colors.secundary }]} onPress={getImage}>
+    <TouchableOpacity
+      style={[styles.logoContainer, { backgroundColor: colors.secundary }]}
+      onPress={getImage}
+    >
       <Image style={styles.logo} source={image} />
     </TouchableOpacity>
   )
