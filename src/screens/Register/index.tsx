@@ -1,5 +1,5 @@
 import React,{FC,useState} from 'react'
-import { View, Text, Image, ScrollView, _View } from 'react-native'
+import { View, Text, Image, ScrollView } from 'react-native'
 import { DynamicForm, Button } from 'components'
 import { useTheme } from '@providers'
 import Logo from '@assets/img/logo.png'
@@ -38,7 +38,7 @@ const Register:FC = () => {
               style={styles.formButton}
             />
             <Button
-              text='volver'
+              text={translate('back')}
               onPress={()=>navigator.navigate('Login')}
               disabled={false}
               style={[{color:'#fff'}]}

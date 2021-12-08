@@ -9,6 +9,7 @@
   "email":"Correo Electronico",
   "password":"Contraseña",
   "login":"Ingresar",
-  "logoit":"Cerrar sesion",
-  "recover_password":"Olvide mi contraseña"
+  "logout":"Cerrar sesion",
+  "recover_password":"Olvide mi contraseña",
+  "back":"volver"
 }

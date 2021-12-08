@@ -18,6 +18,7 @@
   "email":"Email",
   "password":"Password",
   "login":"Login",
-  "logoit":"Logout",
-  "recover_password":"Recover password"
+  "logout":"Logout",
+  "recover_password":"Recover password",
+  "back":"Back"
 }
