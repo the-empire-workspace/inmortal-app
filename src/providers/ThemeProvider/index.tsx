@@ -6,7 +6,7 @@ import React, {
   useEffect,
 } from 'react'
 import { useColorScheme } from 'react-native-appearance'
-import { lightColors, /* darkColors */ } from '@theme'
+import { lightColors /* darkColors */ } from '@theme'
 
 export const ThemeContext = createContext({
   isDark: false,

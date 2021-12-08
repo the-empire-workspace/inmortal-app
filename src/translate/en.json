@@ -14,5 +14,11 @@
   "payment_frequency": "Payment Frequency",
   "save": "Save",
   "delete": "Delete",
-  "modify": "Modify"
+  "modify": "Modify",
+  "email":"Email",
+  "password":"Password",
+  "login":"Login",
+  "logout":"Logout",
+  "recover_password":"Recover password",
+  "back":"Back"
 }

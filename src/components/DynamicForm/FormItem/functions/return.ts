@@ -28,8 +28,8 @@ const returnForm = (
   let changed
 
   for (let element of form) {
-    if (element?.element === 'multiple') {
-      for (let item of element?.element_array)
+    if (element.element === 'multiple') {
+      for (let item of element.element_array)
         changed = setValidData(item, data, name, value)
       continue
     }
