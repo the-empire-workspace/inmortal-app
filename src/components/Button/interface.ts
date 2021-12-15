@@ -2,5 +2,6 @@ export interface Props {
   text: string
   onPress: any
   disabled: any
-  style: any
+  style?: any
+  styleText?: any
 }

@@ -11,7 +11,7 @@ export const PublicStack = () => (
       animation: 'slide_from_bottom',
       headerShown: false,
     }}
-    initialRouteName="Register"
+    initialRouteName="Login"
   >
     <Stack.Screen name="Login" component={Login} />
     <Stack.Screen name="Register" component={Register} />

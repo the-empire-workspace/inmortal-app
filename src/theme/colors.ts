@@ -1,8 +1,8 @@
 export const lightColors = {
   background: '#f8ffef',
   primary: '#050c2c',
-  secundary: '#f8ffef',
-  text: '#41485c',
+  secundary: '#2C9BA6',
+  text: '#000000',
   secundaryText: '#f8ffef',
   error: '#D32F2F',
 }

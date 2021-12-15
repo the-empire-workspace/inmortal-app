@@ -1,6 +1,6 @@
 import { styles } from './styles'
 
-export const loginForm = (color: any /* translate: any */) => [
+export const loginForm = (color: any, translate: any) => [
   {
     element: 'input',
     name: 'email',
@@ -8,7 +8,7 @@ export const loginForm = (color: any /* translate: any */) => [
     type: 'text',
     defaultValue: '',
     keyboardType: 'default',
-    placeholder: 'Correo Electronico',
+    placeholder: translate('email'),
     returnKeyType: 'go',
     placeholderTextColor: color,
     style: { ...styles.formItem, color: color },
@@ -27,7 +27,7 @@ export const loginForm = (color: any /* translate: any */) => [
     defaultValue: '',
     placeholderTextColor: color,
     keyboardType: 'default',
-    placeholder: 'Contraseña',
+    placeholder: translate('password'),
     returnKeyType: 'go',
     validations: {
       required: true,
