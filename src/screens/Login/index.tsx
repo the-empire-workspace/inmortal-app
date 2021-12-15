@@ -11,7 +11,6 @@ import { styles } from './styles'
 import { signin } from 'store/account/action'
 
 const Login: FC = () => {
-
   const { colors } = useTheme()
   const [form, setForm] = useState([{}, false])
 
@@ -65,8 +64,8 @@ const Login: FC = () => {
 
 const Validator = (form: any, account: any) => {
   if (
-    form.email[0] == account.user.user.email[0] &&
-    form.password[0] == account.user.user.password[0]
+    form.email[0] === account.user.user.email[0] &&
+    form.password[0] === account.user.user.password[0]
   )
     return true
   else return false

@@ -25,7 +25,7 @@ const Register: FC = () => {
         <View style={styles.formContent}>
           <Text style={styles.formTitle}>Crear cuenta</Text>
           <DynamicForm
-            formData={registerForm(colors.primary, translate)}
+            formData={registerForm(colors.primary)}
             returnData={(data: any) => {
               setForm(data)
             }}

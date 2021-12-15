@@ -11,6 +11,6 @@ export const styles = StyleSheet.create({
     width: '20%',
     height: 60,
     alignItems: 'center',
-    justifyContent: 'center'
-  }
+    justifyContent: 'center',
+  },
 })
