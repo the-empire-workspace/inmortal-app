@@ -2,48 +2,71 @@ import React, { FC } from 'react'
 import { Image, TouchableOpacity, View } from 'react-native'
 import { styles } from './styles'
 import { useTheme } from 'providers'
+import Global from '@assets/img/global.png'
+import Social from '@assets/img/social.png'
+import Emergency from '@assets/img/emergency.png'
+import Services from '@assets/img/services.png'
+import Profile from '@assets/img/profile.png'
 
 const Nav = [
   {
-    key: 'Dashboard',
-    label: 'Dashboard',
-    icon: {},
-    route: 'Dashboard',
+    key: 'Global',
+    label: 'Global',
+    icon: Global,
+    route: 'Social',
   },
   {
-    key: 'Incoming',
-    label: 'Incoming',
-    icon: {},
-    route: 'Incoming',
+    key: 'Social',
+    label: 'Social',
+    icon: Social,
+    route: 'Social',
   },
   {
-    key: 'Outcoming',
-    label: 'Outcoming',
-    icon: {},
-    route: 'Outcoming',
+    key: 'Emergency',
+    label: 'Emergency',
+    icon: Emergency,
+    route: 'Emergency',
+  },
+  {
+    key: 'Services',
+    label: 'Services',
+    icon: Services,
+    route: 'Services',
   },
   {
     key: 'Profile',
     label: 'Profile',
-    icon: {},
+    icon: Profile,
     route: 'Profile',
   },
 ]
 
-const MainTabComponent: FC<any> = ({ navigation }) => {
+const MainTabComponent: FC<any> = ({ navigation, state }) => {
   const { colors } = useTheme()
 
   return (
-    <View style={[styles.nav, { backgroundColor: colors?.background }]}>
-      {Nav.map((data: any, index: any) => (
-        <TouchableOpacity
-          style={styles.navItem}
-          key={index}
-          onPress={() => navigation.navigate(data.route)}
-        >
-          <Image style={styles.navImage} source={data.icon} />
-        </TouchableOpacity>
-      ))}
+    <View style={[styles.nav, { backgroundColor: colors?.primary }]}>
+      {Nav.map((data: any, index: any) => {
+        const { width, height } = Image.resolveAssetSource(data?.icon)
+
+        return (
+          <TouchableOpacity
+            style={[
+              styles.navItem,
+              state?.index === index
+                ? { backgroundColor: colors.secundary }
+                : {},
+            ]}
+            key={index}
+            onPress={() => navigation.navigate(data.route)}
+          >
+            <Image
+              style={{ width: width / 14, height: height / 14 }}
+              source={data.icon}
+            />
+          </TouchableOpacity>
+        )
+      })}
     </View>
   )
 }

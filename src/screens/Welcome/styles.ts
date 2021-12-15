@@ -33,5 +33,5 @@ export const styles = StyleSheet.create({
   subtitle: {
     marginTop: 15,
     fontSize: 20,
-  }
+  },
 })

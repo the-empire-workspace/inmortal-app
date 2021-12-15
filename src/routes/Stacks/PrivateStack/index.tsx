@@ -14,10 +14,7 @@ export const PrivateStack = () => {
       }}
       initialRouteName="main"
     >
-      <Stack.Screen
-        name="main"
-        component={MainTab}
-      />
+      <Stack.Screen name="main" component={MainTab} />
     </Stack.Navigator>
   )
 }
