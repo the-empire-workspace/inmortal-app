@@ -7,8 +7,8 @@ export const styles = StyleSheet.create({
     marginVertical: 10,
   },
   logo: {
-    width: 110,
-    height: 150,
+    width: 130,
+    height: 180,
   },
   formContent: {
     width: '90%',
@@ -25,12 +25,11 @@ export const styles = StyleSheet.create({
     borderColor: 'black',
     borderWidth: 1,
     marginTop: 10,
-    paddingLeft: 3,
+    paddingHorizontal: 20,
   },
   formButton: {
     height: 40,
     width: '45%',
-    backgroundColor: '#2c9ba6',
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: 20,
@@ -44,11 +43,11 @@ export const styles = StyleSheet.create({
   links: {
     flexDirection: 'column',
     alignItems: 'flex-end',
-    color: '#000',
   },
   root: {
     flex: 1,
     width: '100%',
     height: '100%',
+    paddingTop: 40
   },
 })
