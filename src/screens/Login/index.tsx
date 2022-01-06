@@ -37,9 +37,7 @@ const Login: FC = () => {
       <View style={styles.buttonContent}>
         <Button
           text={translate('login')}
-          onPress={() =>
-            Validator(form[0], account) ? loginFun() : console.log('err')
-          }
+          onPress={() => loginFun() }
           disabled={false}
           style={{ ...styles.formButton, backgroundColor: colors.secundary }}
         />
@@ -63,11 +61,9 @@ const Login: FC = () => {
 }
 
 const Validator = (form: any, account: any) => {
-  if (
-    form.email[0] === account.user.user.email[0] &&
-    form.password[0] === account.user.user.password[0]
-  )
-    return true
+  const validMail = form?.email ? form?.email[0] === account?.user?.user?.email[0] : false
+  const validPassword = form?.password ? form?.password[0] === account?.user?.user?.password[0] : false
+  if (validMail && validPassword) return true
   else return false
 }
 
