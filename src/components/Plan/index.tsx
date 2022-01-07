@@ -31,8 +31,7 @@ const Plan = (props: any) => {
             <Text>Suscribirse al {props.name}</Text>
           </TouchableOpacity>
         </View>
-
-        }
+      )}
     </View>
   )
 }
