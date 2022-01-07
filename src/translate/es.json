@@ -14,5 +14,7 @@
   "back":"volver",
   "accept": "Aceptar",
   "reject": "Rechazar",
-  "notifications": "Notificaciones"
+  "notifications": "Notificaciones",
+  "have_emergency": "Tengo una Emergencia",
+  "validate_data": "Validar Datos"
 }
