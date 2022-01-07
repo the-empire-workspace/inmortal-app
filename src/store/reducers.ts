@@ -4,7 +4,7 @@ import user from './user/reducer'
 
 const reducers = combineReducers({
   account,
-  user
+  user,
 })
 
 export default reducers

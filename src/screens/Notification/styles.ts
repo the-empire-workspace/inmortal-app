@@ -22,11 +22,11 @@ export const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     paddingVertical: 15,
-    paddingHorizontal: 20
+    paddingHorizontal: 20,
   },
   title: {
     fontSize: 20,
     textAlign: 'center',
-    marginVertical: 10
-  }
+    marginVertical: 10,
+  },
 })

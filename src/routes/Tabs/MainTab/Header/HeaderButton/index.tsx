@@ -4,14 +4,21 @@ import Notification from '@assets/img/notification.png'
 import { styles } from './styles'
 import { useNavigation } from '@react-navigation/native'
 
-const HeaderButton: FC<any> = (props) => {
+const HeaderButton: FC<any> = () => {
   const { width, height } = Image.resolveAssetSource(Notification)
   const route: any = useNavigation()
 
   return (
     <View style={styles.root}>
-      <TouchableOpacity onPress={() => { route.navigate('Notification') }}>
-        <Image style={{ width: width / 13, height: height / 13 }} source={Notification} />
+      <TouchableOpacity
+        onPress={() => {
+          route.navigate('Notification')
+        }}
+      >
+        <Image
+          style={{ width: width / 13, height: height / 13 }}
+          source={Notification}
+        />
       </TouchableOpacity>
     </View>
   )

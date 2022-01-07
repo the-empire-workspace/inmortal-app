@@ -8,14 +8,13 @@ import { useTheme } from 'providers'
 const Tab = createBottomTabNavigator()
 
 const MainTab: FC<any> = () => {
-
   const { colors } = useTheme()
 
   const options = {
     headerShown: true,
     headerTitle: () => <HeaderTitle />,
     headerRight: () => <HeaderButton />,
-    headerStyle: { backgroundColor: colors.background }
+    headerStyle: { backgroundColor: colors.background },
   }
 
   return (

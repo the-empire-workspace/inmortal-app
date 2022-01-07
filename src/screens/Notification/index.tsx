@@ -17,13 +17,13 @@ const Notification: FC = () => {
     {
       title: 'Alfredo Guevara',
       image: Alfredo,
-      addorReject: true
+      addorReject: true,
     },
     {
       title: 'Pepe Suarez',
       image: Pepe,
-      addorReject: true
-    }
+      addorReject: true,
+    },
   ]
   return (
     <SafeAreaView style={[styles.root, { backgroundColor: colors.background }]}>
@@ -31,17 +31,18 @@ const Notification: FC = () => {
         <TouchableOpacity onPress={() => router.goBack()}>
           <Text style={[styles.title, { color: colors.text }]}>X</Text>
         </TouchableOpacity>
-        <Text style={[styles.title, { color: colors.text }]}>{translate('notifications')}</Text>
+        <Text style={[styles.title, { color: colors.text }]}>
+          {translate('notifications')}
+        </Text>
         <Image style={styles.line} source={Line} />
       </View>
       <FlatList
         data={data}
-        keyExtractor={(item) => item.title}
+        keyExtractor={item => item.title}
         renderItem={({ item }) => <NotificationCard {...item} />}
         style={styles.root}
       />
     </SafeAreaView>
-
   )
 }
 

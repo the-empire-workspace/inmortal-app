@@ -2,7 +2,7 @@ import { DispatchProps } from 'interfaces'
 import { SET_PROFILE } from './action-types'
 
 const initialState = {
-  profile: {}
+  profile: {},
 }
 
 const UserReducer = (

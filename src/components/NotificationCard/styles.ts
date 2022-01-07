@@ -9,7 +9,7 @@ export const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    marginVertical: 10
+    marginVertical: 10,
   },
   logo: {
     height: 90,
@@ -21,11 +21,11 @@ export const styles = StyleSheet.create({
     textAlign: 'center',
     fontSize: 20,
     marginVertical: 10,
-    paddingHorizontal: 10
+    paddingHorizontal: 10,
   },
   generalText: {
     fontSize: 10,
-    marginVertical: 1
+    marginVertical: 1,
   },
   buttonContainer: {
     flexDirection: 'row',
@@ -34,6 +34,6 @@ export const styles = StyleSheet.create({
     width: 60,
     height: 60,
     justifyContent: 'center',
-    alignItems: 'center'
-  }
+    alignItems: 'center',
+  },
 })
