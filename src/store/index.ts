@@ -8,7 +8,7 @@ import rootSaga from './sagas'
 const persistConfig = {
   key: 'root',
   storage: AsyncStorage,
-  whitelist: ['account','invoice'],
+  whitelist: ['account', 'invoice'],
   blacklist: [],
 }
 

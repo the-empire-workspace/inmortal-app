@@ -10,7 +10,7 @@ import { useTheme } from '@providers'
 const Social: FC = () => {
   const { colors } = useTheme()
   const account = useSelector((state: any) => state.account)
-  const [ form ] = useState([account, false])
+  const [form] = useState([account, false])
   const dispatch = useDispatch()
   const logoutFun = () => dispatch(logout({ ...form[0] }))
 

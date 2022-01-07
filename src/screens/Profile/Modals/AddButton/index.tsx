@@ -9,28 +9,28 @@ const AddButton = () => {
   const [toggleModal, setToggleModal] = useState(false)
   return (
     <View>
-      <TouchableOpacity onPress={()=>setToggleModal(true)}>
-        <Text style={[styles.openModal,{color:colors.primary}]}>+</Text>
+      <TouchableOpacity onPress={() => setToggleModal(true)}>
+        <Text style={[styles.openModal, { color: colors.primary }]}>+</Text>
       </TouchableOpacity>
       <Modal transparent visible={toggleModal}>
         <View style={styles.root}>
           <View style={styles.modalContainer}>
-            <Text style={[styles.modalText, {color:colors.primary}]}>Ingrese el correo de la persona que desea agregar</Text>
-            <TextInput
-              placeholder='Correo'
-              style={styles.modalTextInput}
-            />
+            <Text style={[styles.modalText, { color: colors.primary }]}>
+              Ingrese el correo de la persona que desea agregar
+            </Text>
+            <TextInput placeholder="Correo" style={styles.modalTextInput} />
             <View style={styles.modalButton}>
-              <TouchableOpacity onPress={()=>setToggleModal(false)}>
-                <Text style={{color:colors.primary}}>Calcelar</Text>
+              <TouchableOpacity onPress={() => setToggleModal(false)}>
+                <Text style={{ color: colors.primary }}>Calcelar</Text>
               </TouchableOpacity>
-              <TouchableOpacity onPress={()=>setToggleModal(false)} style={styles.addButton}>
-                <Text style={{color:'white'}}>Agregar</Text>
+              <TouchableOpacity
+                onPress={() => setToggleModal(false)}
+                style={styles.addButton}
+              >
+                <Text style={{ color: 'white' }}>Agregar</Text>
               </TouchableOpacity>
             </View>
-            
           </View>
-          
         </View>
       </Modal>
     </View>

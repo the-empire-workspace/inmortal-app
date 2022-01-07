@@ -1,18 +1,18 @@
 import { StyleSheet } from 'react-native'
 
 export const styles = StyleSheet.create({
-  modalButton:{
-    alignItems:'center'
+  modalButton: {
+    alignItems: 'center',
   },
-  header:{
-    flexDirection:'row',
-    marginHorizontal:'5%'
+  header: {
+    flexDirection: 'row',
+    marginHorizontal: '5%',
   },
-  headerTitle:{
-    fontSize:20,
-    marginLeft:'5%'
+  headerTitle: {
+    fontSize: 20,
+    marginLeft: '5%',
   },
-  add:{
+  add: {
     height: 30,
     width: '45%',
     backgroundColor: '#2c9ba6',
@@ -20,34 +20,33 @@ export const styles = StyleSheet.create({
     alignItems: 'center',
     borderRadius: 20,
   },
-  imagesContent:{
-    margin:'5%',
-    flexDirection:'row',
-    alignItems:'center'
+  imagesContent: {
+    margin: '5%',
+    flexDirection: 'row',
+    alignItems: 'center',
   },
-  userDetails:{
-    marginHorizontal:'5%'
+  userDetails: {
+    marginHorizontal: '5%',
   },
-  userInfo:{
-    fontSize:17
+  userInfo: {
+    fontSize: 17,
   },
-  Title:{
-    fontSize:20,
-    alignSelf:'center',
-    marginTop:'5%'
+  Title: {
+    fontSize: 20,
+    alignSelf: 'center',
+    marginTop: '5%',
   },
-  invoiceText:{
-    fontSize:17
+  invoiceText: {
+    fontSize: 17,
   },
-  invoiceTextDesciption:{
-    fontSize:17,
-    marginTop:10
+  invoiceTextDesciption: {
+    fontSize: 17,
+    marginTop: 10,
   },
-  invoiceItem:{
-    margin:'5%',
-    padding:'3%',
+  invoiceItem: {
+    margin: '5%',
+    padding: '3%',
     borderColor: '#050C2C',
     borderWidth: 1,
-  }
-
+  },
 })
