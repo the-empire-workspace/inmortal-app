@@ -9,6 +9,7 @@ import { AppearanceProvider } from 'react-native-appearance'
 import { ThemeProvider } from '@providers'
 import RNLocalize from 'react-native-localize'
 import { setI18nConfig } from '@utils'
+import { SafeAreaProvider } from 'react-native-safe-area-context'
 
 const App = () => {
   const handleLocalizationChange = () => {
@@ -25,17 +26,19 @@ const App = () => {
 
   return (
     <AppearanceProvider>
-      <ThemeProvider>
-        <NavigationContainer>
-          <Provider store={store}>
-            <PersistGate persistor={persistor} loading={null}>
-              <ErrorBoundary>
-                <Main />
-              </ErrorBoundary>
-            </PersistGate>
-          </Provider>
-        </NavigationContainer>
-      </ThemeProvider>
+      <SafeAreaProvider>
+        <ThemeProvider>
+          <NavigationContainer>
+            <Provider store={store}>
+              <PersistGate persistor={persistor} loading={null}>
+                <ErrorBoundary>
+                  <Main />
+                </ErrorBoundary>
+              </PersistGate>
+            </Provider>
+          </NavigationContainer>
+        </ThemeProvider>
+      </SafeAreaProvider>
     </AppearanceProvider>
   )
 }

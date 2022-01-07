@@ -11,5 +11,10 @@
   "login":"Ingresar",
   "logout":"Cerrar sesion",
   "recover_password":"Olvide mi contraseña",
-  "back":"volver"
+  "back":"volver",
+  "accept": "Aceptar",
+  "reject": "Rechazar",
+  "notifications": "Notificaciones",
+  "have_emergency": "Tengo una Emergencia",
+  "validate_data": "Validar Datos"
 }

@@ -1,29 +1,47 @@
-import { Button } from 'components'
-import React, { FC, useState } from 'react'
-import { View, Text } from 'react-native'
-import { translate } from 'utils'
-import { useSelector, useDispatch } from 'react-redux'
-import { logout } from 'store/account/action'
+import React, { FC } from 'react'
+import { FlatList } from 'react-native'
 import { styles } from './styles'
 import { useTheme } from '@providers'
+import JavierAristu from '@assets/testimg/javieraristu.jpeg'
+import Pilar from '@assets/testimg/pilar.jpeg'
+import Carmen from '@assets/testimg/carmen.jpeg'
+import { SocialCard } from 'components'
 
 const Social: FC = () => {
   const { colors } = useTheme()
-  const account = useSelector((state: any) => state.account)
-  const [form] = useState([account, false])
-  const dispatch = useDispatch()
-  const logoutFun = () => dispatch(logout({ ...form[0] }))
-
+  const data = [
+    {
+      name: 'Javier Aristu',
+      image: JavierAristu,
+      description:
+        'El escritor, profesor de Literatura y referente de la izquierda andaluza ha fallecido en Merida a los 72 años',
+      birth: '03-05-1949',
+      desease: '20-09-2021',
+    },
+    {
+      name: 'Pilar Estébanez',
+      image: Pilar,
+      description:
+        'Pilar Estébanez, fundadora y presidenta de honor de Médicos del Mundo en España, falleció el jueves',
+      birth: '09-03-1974',
+      desease: '18-09-2021',
+    },
+    {
+      name: 'Carmen Rovira',
+      image: Carmen,
+      description:
+        'Natural de Huelva, impulsó la lectura de los textos originales, su contextualización y el análisis de las consecuencias en los',
+      birth: '01-12-1932',
+      desease: '15-09-2021',
+    },
+  ]
   return (
-    <View style={[styles.root, { backgroundColor: colors.background }]}>
-      <Text>Social</Text>
-      <Button
-        text={translate('logout')}
-        onPress={logoutFun}
-        disabled={false}
-        style={styles.formButton}
-      />
-    </View>
+
+    <FlatList
+      data={data}
+      renderItem={({ item }) => <SocialCard {...item} />}
+      style={[styles.root, { backgroundColor: colors.background }]}
+    />
   )
 }
 
