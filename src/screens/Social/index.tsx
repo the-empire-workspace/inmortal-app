@@ -36,7 +36,6 @@ const Social: FC = () => {
     },
   ]
   return (
-
     <FlatList
       data={data}
       renderItem={({ item }) => <SocialCard {...item} />}
