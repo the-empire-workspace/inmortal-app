@@ -10,13 +10,13 @@ import { useTheme } from '@providers'
 const Social: FC = () => {
   const { colors } = useTheme()
   const account = useSelector((state: any) => state.account)
-  const [form /* setForm */] = useState([account, false])
+  const [ form ] = useState([account, false])
   const dispatch = useDispatch()
   const logoutFun = () => dispatch(logout({ ...form[0] }))
 
   return (
     <View style={[styles.root, { backgroundColor: colors.background }]}>
-      <Text>hola</Text>
+      <Text>Social</Text>
       <Button
         text={translate('logout')}
         onPress={logoutFun}
