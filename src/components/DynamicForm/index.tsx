@@ -34,7 +34,7 @@ const DynamicForm: FC<Props> = ({ formData, returnData }) => {
 
   return (
     <View>
-      {form.map((values: any, index: any) => (
+      {form?.map((values: any, index: any) => (
         <FormItem
           data={data}
           form={form}
