@@ -1,13 +1,13 @@
 import React, { FC } from 'react'
-import { SafeAreaView } from 'react-native'
+import { SafeAreaView, View } from 'react-native'
 import { styles } from './styles'
 import AppNavigator from '@routes'
 
 const Main: FC = () => {
   return (
-    <SafeAreaView style={[styles.root]}>
+    <View style={[styles.root]}>
       <AppNavigator />
-    </SafeAreaView>
+    </View>
   )
 }
 
