@@ -16,10 +16,10 @@ const Nav = [
     route: 'Social',
   },
   {
-    key: 'Social',
-    label: 'Social',
+    key: 'Personal',
+    label: 'Personal',
     icon: Social,
-    route: 'Social',
+    route: 'Personal',
   },
   {
     key: 'Emergency',

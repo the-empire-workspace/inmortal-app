@@ -5,7 +5,7 @@ import { translate } from '@utils'
 import { Button, DynamicForm } from 'components'
 import { loginForm } from './form'
 import { useTheme } from '@providers'
-import { useSelector, useDispatch } from 'react-redux'
+import { useDispatch } from 'react-redux'
 import Logo from '@assets/img/logo.png'
 import { styles } from './styles'
 import { signin } from 'store/account/action'
@@ -16,7 +16,6 @@ const Login: FC = () => {
 
   const navigation: any = useNavigation()
   const dispatch = useDispatch()
-  const account = useSelector((state: any) => state.account)
 
   const loginFun = () => dispatch(signin({ ...form[0] }))
 
@@ -37,9 +36,7 @@ const Login: FC = () => {
       <View style={styles.buttonContent}>
         <Button
           text={translate('login')}
-          onPress={() =>
-            Validator(form[0], account) ? loginFun() : console.log('err')
-          }
+          onPress={() => loginFun()}
           disabled={false}
           style={{ ...styles.formButton, backgroundColor: colors.secundary }}
         />
@@ -60,15 +57,6 @@ const Login: FC = () => {
       </View>
     </ScrollView>
   )
-}
-
-const Validator = (form: any, account: any) => {
-  if (
-    form.email[0] === account.user.user.email[0] &&
-    form.password[0] === account.user.user.password[0]
-  )
-    return true
-  else return false
 }
 
 export default Login
