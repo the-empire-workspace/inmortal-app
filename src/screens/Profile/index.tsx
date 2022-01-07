@@ -1,5 +1,5 @@
-import React, { FC, useState } from 'react'
-import { View, Text, TouchableOpacity, Image, ScrollView } from 'react-native'
+import React, { FC } from 'react'
+import { View, Text, Image, ScrollView } from 'react-native'
 import { Billing, Benefits, Plans, MenuDrawer, AddButton } from './Modals'
 import { useTheme } from '@providers'
 import Logo from '@assets/img/logo.png'

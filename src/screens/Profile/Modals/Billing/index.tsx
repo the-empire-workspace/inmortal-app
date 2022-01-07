@@ -7,7 +7,6 @@ import {
   TouchableOpacity,
   ScrollView,
 } from 'react-native'
-import { Button } from 'components'
 import { useDispatch, useSelector } from 'react-redux'
 import { useTheme } from '@providers'
 import { add } from 'store/invoice/action'
@@ -22,7 +21,7 @@ const Billing: FC = () => {
   const { colors } = useTheme()
   const account = useSelector((state: any) => state.account)
   const dispatch = useDispatch()
-  const [invoiceState, setInvoice] = useState({
+  const [invoiceState] = useState({
     id: '###',
     date_creation: '0.0.2022',
     amount: '$$$',

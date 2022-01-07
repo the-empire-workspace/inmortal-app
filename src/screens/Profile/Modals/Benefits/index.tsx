@@ -15,7 +15,7 @@ import { useTheme } from '@providers'
 import { useSelector } from 'react-redux'
 import { styles } from './styles'
 
-const Benefits = () => {
+const Benefits: FC = () => {
   const [toggleModal, setToggleModal] = useState(false)
   const { colors } = useTheme()
   const account = useSelector((state: any) => state.account)

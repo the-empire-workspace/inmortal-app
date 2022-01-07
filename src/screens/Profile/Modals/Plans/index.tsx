@@ -15,7 +15,7 @@ import { useTheme } from '@providers'
 const Plans: FC = () => {
   const [toggleModal, setToggleModal] = useState(false)
   const { colors } = useTheme()
-  const [plans, setplans] = useState([
+  const [plans] = useState([
     {
       name: 'Plan Dorado',
       description:

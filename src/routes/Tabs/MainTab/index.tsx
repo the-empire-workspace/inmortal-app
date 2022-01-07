@@ -1,8 +1,7 @@
 import React, { FC } from 'react'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import MainTabComponent from './MainTabComponent'
-import { Social, Profile } from 'screens'
-import { Personal, Social } from 'screens'
+import { Personal, Social, Profile } from 'screens'
 import { HeaderButton, HeaderTitle } from './Header'
 import { useTheme } from 'providers'
 

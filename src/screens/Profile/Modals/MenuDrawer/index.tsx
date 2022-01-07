@@ -32,7 +32,7 @@ const MenuDrawer: FC = () => {
       <Modal transparent visible={toggleModal}>
         <View style={styles.root}>
           <View style={styles.modalContainer}>
-
+            <Text
               style={{
                 color: colors.primary,
                 alignSelf: 'flex-end',
