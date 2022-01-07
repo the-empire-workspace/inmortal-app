@@ -23,5 +23,7 @@
   "back":"Back",
   "accept": "Accept",
   "reject": "Reject",
-  "notifications": "Notifications"
+  "notifications": "Notifications",
+  "have_emergency": "I Have An Emergency",
+  "validate_data": "Validate Data"
 }
