@@ -20,5 +20,8 @@
   "login":"Login",
   "logout":"Logout",
   "recover_password":"Recover password",
-  "back":"Back"
+  "back":"Back",
+  "accept": "Accept",
+  "reject": "Reject",
+  "notifications": "Notifications"
 }
