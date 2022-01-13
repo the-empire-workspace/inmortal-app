@@ -51,8 +51,8 @@ const Plans: FC = () => {
               Planes
             </Text>
           </View>
-          {plans.map((e,i) => {
-            return <Plan name={e.name} description={e.description} key={i}/>
+          {plans.map((e, i) => {
+            return <Plan name={e.name} description={e.description} key={i} />
           })}
         </ScrollView>
       </Modal>
