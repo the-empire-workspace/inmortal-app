@@ -13,6 +13,7 @@ import Btc from '@assets/img/btc.png'
 import Card from '@assets/img/card.png'
 import Mobile from '@assets/img/mobile.png'
 import Like from '@assets/img/heart.png'
+import Star from '@assets/img/star.png'
 import { useTheme } from 'providers'
 import { styles } from './styles'
 
@@ -38,7 +39,6 @@ const Commerce = ({ route }: any) => {
       <FlatList
         data={data}
         keyExtractor={item => item.commerceName}
-        scrollEnabled={false}
         renderItem={({ item }) => (
           <TouchableOpacity
             style={styles.commerceItem}
@@ -63,10 +63,10 @@ const Commerce = ({ route }: any) => {
                 <Image source={Mobile} style={{ width: 10, height: 18 }} />
               </View>
             </View>
-            <Image
-              source={Like}
-              style={[styles.like, { width: 20, height: 20 }]}
-            />
+            <View style={styles.like}>
+              <Image source={Like} style={[{ width: 20, height: 20 }]} />
+              <Image source={Star} style={[{ width: 20, height: 20 }]} />
+            </View>
           </TouchableOpacity>
         )}
         style={[styles.root, { backgroundColor: colors.background }]}

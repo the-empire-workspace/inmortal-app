@@ -13,6 +13,7 @@ import Btc from '@assets/img/btc.png'
 import Card from '@assets/img/card.png'
 import Mobile from '@assets/img/mobile.png'
 import Like from '@assets/img/heart.png'
+import Star from '@assets/img/star.png'
 import { useNavigation } from '@react-navigation/native'
 import { useTheme } from '@providers'
 import { styles } from './styles'
@@ -60,7 +61,10 @@ const ServiceofCommerce = ({ route }: any) => {
             <Image source={Mobile} style={{ width: 10, height: 18 }} />
           </View>
         </View>
-        <Image source={Like} style={[styles.like, { width: 20, height: 20 }]} />
+        <View style={styles.like}>
+          <Image source={Like} style={[{ width: 20, height: 20 }]} />
+          <Image source={Star} style={[{ width: 20, height: 20 }]} />
+        </View>
       </View>
       <View style={styles.serviceList}>
         <Text style={{ color: colors.text, fontSize: 20 }}>
@@ -94,7 +98,6 @@ const ServiceofCommerce = ({ route }: any) => {
         <FlatList
           data={data}
           keyExtractor={item => item.key}
-          scrollEnabled={false}
           renderItem={({ item }) => (
             <TouchableOpacity
               style={styles.serviceItem}
@@ -170,21 +173,21 @@ const ServiceofCommerce = ({ route }: any) => {
               <Text style={{ color: colors.text, fontSize: 20 }}>
                 ----------------------------------------
               </Text>
-
-              <TouchableOpacity
-                style={[
-                  styles.buttonModal,
-                  { backgroundColor: colors.secundary },
-                ]}
-                onPress={() => {
-                  setToggleModal(!toggleModal)
-                }}
-              >
-                <Text style={{ color: '#fff', fontSize: 17 }}>
-                  Proseguir con la obtencion
-                </Text>
-              </TouchableOpacity>
             </View>
+            <TouchableOpacity
+              style={[
+                styles.buttonModal,
+                { backgroundColor: colors.secundary },
+              ]}
+              onPress={() => {
+                navigation.navigate('Bill')
+                setToggleModal(!toggleModal)
+              }}
+            >
+              <Text style={{ color: '#fff', fontSize: 17 }}>
+                Proseguir con la obtencion
+              </Text>
+            </TouchableOpacity>
           </View>
         </View>
       </Modal>
