@@ -62,14 +62,14 @@ const Benefits: FC = () => {
               No. de contrato: {'###'}
             </Text>
             <Text style={[styles.userInfo, { color: colors.primary }]}>
-              Plan: {invoice.invoice.plan}{' '}
+              Plan: {invoice?.invoice?.plan}{' '}
             </Text>
             <Text style={[styles.userInfo, { color: colors.primary }]}>
               Estatus del plan:{' '}
-              {invoice.invoice.planActive ? 'Activo' : 'Ausente'}
+              {invoice?.invoice?.planActive ? 'Activo' : 'Ausente'}
             </Text>
             <Text style={[styles.userInfo, { color: colors.primary }]}>
-              Fecha de emicion: {invoice.invoice.date_creation}
+              Fecha de emision: {invoice?.invoice?.date_creation}
             </Text>
           </View>
           <Text style={[styles.Title, { color: colors.primary }]}>
