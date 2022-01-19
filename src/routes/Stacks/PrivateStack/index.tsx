@@ -1,7 +1,15 @@
 import React from 'react'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import { MainTab } from '../../Tabs'
-import { Emergency, Notification, UserProfile } from '@screens'
+import {
+  Emergency,
+  Notification,
+  UserProfile,
+  Commerce,
+  ServiceofCommerce,
+  Bill,
+  Payment,
+} from '@screens'
 
 const Stack = createNativeStackNavigator()
 
@@ -20,6 +28,10 @@ export const PrivateStack = () => {
         <Stack.Screen name="Notification" component={Notification} />
         <Stack.Screen name="UserProfile" component={UserProfile} />
         <Stack.Screen name="Emergency" component={Emergency} />
+        <Stack.Screen name="Commerce" component={Commerce} />
+        <Stack.Screen name="ServiceOfCommerce" component={ServiceofCommerce} />
+        <Stack.Screen name="Bill" component={Bill} />
+        <Stack.Screen name="Payment" component={Payment} />
       </Stack.Group>
     </Stack.Navigator>
   )

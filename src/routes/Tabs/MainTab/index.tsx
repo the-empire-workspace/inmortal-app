@@ -1,7 +1,7 @@
 import React, { FC } from 'react'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import MainTabComponent from './MainTabComponent'
-import { Personal, Social } from 'screens'
+import { Personal, Social, Profile, Services } from 'screens'
 import { HeaderButton, HeaderTitle } from './Header'
 import { useTheme } from 'providers'
 
@@ -24,7 +24,9 @@ const MainTab: FC<any> = () => {
       tabBar={props => <MainTabComponent {...props} />}
     >
       <Tab.Screen name="Social" component={Social} />
+      <Tab.Screen name="Profile" component={Profile} />
       <Tab.Screen name="Personal" component={Personal} />
+      <Tab.Screen name="Services" component={Services} />
     </Tab.Navigator>
   )
 }

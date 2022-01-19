@@ -9,7 +9,6 @@ import { SocialCard } from 'components'
 
 const Social: FC = () => {
   const { colors } = useTheme()
-
   const data = [
     {
       name: 'Javier Aristu',
