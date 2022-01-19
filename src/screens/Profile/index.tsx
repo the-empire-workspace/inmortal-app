@@ -9,14 +9,14 @@ import { useSelector } from 'react-redux'
 
 const Profile: FC = () => {
   const { colors } = useTheme()
-  const account = useSelector((state: any) => state.account)
-  const invoice = useSelector((state: any) => state.invoice)
+  const { account, invoice } = useSelector((state: any) => state)
+
 
   return (
     <ScrollView style={[styles.root, { backgroundColor: colors.background }]}>
       <View style={styles.header}>
         <Text style={{ color: colors.primary, alignSelf: 'center' }}>
-          {invoice.invoice.plan}
+          {invoice?.invoice?.plan}
         </Text>
         <View style={styles.headerButtons}>
           <AddButton />

@@ -26,8 +26,10 @@ const MainTab: FC<any> = () => {
       <Tab.Screen name="Social" component={Social} />
       <Tab.Screen name="Personal" component={Personal} />
       <Tab.Screen name="Emergency" component={Emergency} />
-      <Tab.Screen name="Services" component={Services} />
-      <Tab.Screen name="Profile" component={Profile} />
+      <Tab.Group screenOptions={{ headerShown: false }}>
+        <Tab.Screen name="Services" component={Services} />
+        <Tab.Screen name="Profile" component={Profile} />
+      </Tab.Group>
     </Tab.Navigator>
   )
 }

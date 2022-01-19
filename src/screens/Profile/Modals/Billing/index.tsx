@@ -93,18 +93,18 @@ const Billing: FC = () => {
           />
           <View style={styles.invoiceItem}>
             <Text style={[styles.invoiceText, { color: colors.primary }]}>
-              No. de factura: {invoice.invoice.id}
+              No. de factura: {invoice?.invoice?.id}
             </Text>
             <Text style={[styles.invoiceText, { color: colors.primary }]}>
-              Fecha emitida: {invoice.invoice.date_creation}
+              Fecha emitida: {invoice?.invoice?.date_creation}
             </Text>
             <Text style={[styles.invoiceText, { color: colors.primary }]}>
-              Monto: {invoice.invoice.amount}
+              Monto: {invoice?.invoice?.amount}
             </Text>
             <Text
               style={[styles.invoiceTextDesciption, { color: colors.primary }]}
             >
-              {invoice.invoice.description}
+              {invoice?.invoice?.description}
             </Text>
           </View>
         </ScrollView>

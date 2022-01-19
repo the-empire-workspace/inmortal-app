@@ -58,11 +58,13 @@ const MainTabComponent: FC<any> = ({ navigation, state }) => {
       {Nav.map((data: any, index: any) => {
         const { width, height } = Image.resolveAssetSource(data?.icon)
         const focused = state?.index === index
+
         return (
           <TouchableOpacity
             style={[
               styles.navItem,
               focused ? { backgroundColor: colors.tertiary } : {},
+
             ]}
             key={index}
             onPress={() => navigation.navigate(data.route)}
