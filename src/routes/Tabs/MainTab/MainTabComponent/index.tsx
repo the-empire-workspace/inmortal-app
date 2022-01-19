@@ -48,12 +48,13 @@ const MainTabComponent: FC<any> = ({ navigation, state }) => {
     <View style={[styles.nav, { backgroundColor: colors?.primary }]}>
       {Nav.map((data: any, index: any) => {
         const { width, height } = Image.resolveAssetSource(data?.icon)
+        const ind = (index >= 2) ? (index === 2) ? null : index - 1 : index
 
         return (
           <TouchableOpacity
             style={[
               styles.navItem,
-              state?.index === index
+              (state?.index === ind)
                 ? { backgroundColor: colors.secundary }
                 : {},
             ]}
