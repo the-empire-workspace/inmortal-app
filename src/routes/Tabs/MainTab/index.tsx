@@ -1,7 +1,7 @@
 import React, { FC } from 'react'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import MainTabComponent from './MainTabComponent'
-import { Personal, Social, Profile } from 'screens'
+import { Personal, Social, Profile, Services } from 'screens'
 import { HeaderButton, HeaderTitle } from './Header'
 import { useTheme } from 'providers'
 
@@ -28,6 +28,7 @@ const MainTab: FC<any> = () => {
         <Tab.Screen name="Profile" component={Profile} />
       </Tab.Group>
       <Tab.Screen name="Personal" component={Personal} />
+      <Tab.Screen name="Services" component={Services} />
     </Tab.Navigator>
   )
 }
